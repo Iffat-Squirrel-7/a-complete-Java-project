@@ -1,0 +1,8 @@
+JavaCollectionsProject/
+└── src/
+    ├── KthSmallest.java
+    ├── WordFrequency.java
+    ├── PQStackQueue.java
+    ├── StudentTreeMap.java
+    ├── LinkedListEquality.java
+    └── EmployeeHashMap.java
