@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class LinkedListEquality {
+    public static void main(String[] args) {
+        LinkedList<String> list1 = new LinkedList<>(Arrays.asList("A", "B", "C"));
+        LinkedList<String> list2 = new LinkedList<>(Arrays.asList("A", "B", "C"));
+        LinkedList<String> list3 = new LinkedList<>(Arrays.asList("A", "C", "B"));
+
+        System.out.println("List 1 equals List 2: " + list1.equals(list2)); // true
+        System.out.println("List 1 equals List 3: " + list1.equals(list3)); // false
+    }
+}
