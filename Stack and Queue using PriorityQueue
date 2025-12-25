@@ -1,0 +1,32 @@
+import java.util.*;
+
+class Element {
+    int value;
+    long sequence; // Acts as a timestamp
+
+    Element(int value, long sequence) {
+        this.value = value;
+        this.sequence = sequence;
+    }
+}
+
+public class PQStackQueue {
+    public static void main(String[] args) {
+        // Queue (FIFO): Smallest sequence number comes out first
+        PriorityQueue<Element> queue = new PriorityQueue<>(Comparator.comparingLong(e -> e.sequence));
+        
+        // Stack (LIFO): Largest sequence number comes out first
+        PriorityQueue<Element> stack = new PriorityQueue<>((a, b) -> Long.compare(b.sequence, a.sequence));
+
+        // Adding elements
+        long seq = 0;
+        for (int val : new int[]{10, 20, 30}) {
+            queue.add(new Element(val, seq));
+            stack.add(new Element(val, seq));
+            seq++;
+        }
+
+        System.out.println("Queue (FIFO) Poll: " + queue.poll().value); // Should be 10
+        System.out.println("Stack (LIFO) Poll: " + stack.poll().value); // Should be 30
+    }
+}
