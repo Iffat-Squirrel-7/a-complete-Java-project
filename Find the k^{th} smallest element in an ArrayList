@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class KthSmallest {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(12, 3, 5, 7, 19, 1));
+        int k = 3;
+        
+        // Sort the list in ascending order
+        Collections.sort(list);
+        
+        // The kth smallest is at index k-1
+        if (k > 0 && k <= list.size()) {
+            System.out.println("The " + k + "rd smallest element is: " + list.get(k - 1));
+        }
+    }
+}
