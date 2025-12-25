@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class EmployeeHashMap {
+    public static void main(String[] args) {
+        HashMap<Integer, String> employeeMap = new HashMap<>();
+
+        employeeMap.put(501, "Sales");
+        employeeMap.put(502, "Engineering");
+        employeeMap.put(503, "HR");
+
+        int searchId = 502;
+        if (employeeMap.containsKey(searchId)) {
+            System.out.println("Employee " + searchId + " belongs to: " + employeeMap.get(searchId));
+        }
+    }
+}
